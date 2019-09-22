@@ -12,7 +12,7 @@ internal class ArgumentParser {
         var outcome: (busName: String, eventName: String, eventData: String?) = (busName: "", eventName: "", eventData: nil)
         
         for p in queryPairs {
-            var keyValue = p.components(separatedBy: "=")
+            let keyValue = p.components(separatedBy: "=")
             if keyValue[0] == "busName" {
                 outcome.busName = keyValue[1].removingPercentEncoding!
             } else if keyValue[0] == "eventName" {
