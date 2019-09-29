@@ -31,6 +31,6 @@ internal extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        return substring(with: (self.index(startIndex, offsetBy: r.lowerBound) ..< self.index(startIndex, offsetBy: r.upperBound)))
+        return String(self[(self.index(startIndex, offsetBy: r.lowerBound) ..< self.index(startIndex, offsetBy: r.upperBound))])
     }
 }
